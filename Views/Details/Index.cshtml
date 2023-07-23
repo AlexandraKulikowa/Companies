@@ -1,0 +1,108 @@
+﻿@model Company
+
+<body>
+    <div class="header">
+        <h5>Company details</h5> &emsp; &emsp;  @Model.Name
+    </div>
+    <div class="container">
+        <div class="details">
+            <div class="header">
+                <h5>Info</h5> <div class="table-header">&#10003;</div>
+            </div>
+            <div class="toolbar">
+                <table class="toolbar">
+                    <tbody>
+                        <tr>
+                            <td>ID:</td>
+                            <td class="info-items">@Model.Id</td>
+                        </tr>
+                        <tr>
+                            <td>Name:</td>
+                            <td class="info-items">@Model.Name</td>
+                        </tr>
+                        <tr>
+                            <td>Address:</td>
+                            <td class="info-items">@Model.Address</td>
+                        </tr>
+                        <tr>
+                            <td>City:</td>
+                            <td class="info-items">@Model.City.Name</td>
+                        </tr>
+                        <tr>
+                            <td>State:</td>
+                            <td class="info-items">@Model.State.Name</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="details">
+            <div class="header">
+                <h5>History</h5> <div class="table-header">&#128472;</div>
+            </div>
+            <table class="history">
+                <thead>
+                    <tr>
+                        <th class="content-caption">Order Date</th>
+                        <th class="content-caption">Store City</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model.Orders)
+                    {
+                        <tr>
+                            <td class="content">@item.OrderDate</td>
+                            <td class="content">@item.City.Name</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="details">
+            <div class="header">
+                <h5>Notes</h5> <div class="table-header"> + <img src="~/images/Basket.png" alt="Удаление"> &#128472;</div>
+            </div>
+            <table class="history">
+                <thead>
+                    <tr>
+                        <th class="content-caption">Invoice Number</th>
+                        <th class="content-caption">Employee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Notes)
+                    {
+                        <tr>
+                            <td class="content right-side">@item.InvoiceNumber</td>
+                            <td class="content">@item.Employee.FirstName @item.Employee.LastName</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="details">
+            <div class="header">
+                <h5>Employees</h5> <div class="table-header"> + &#128393 &#128472;</div>
+            </div>
+            <table class="history">
+                <thead>
+                    <tr>
+                        <th class="content-caption">First Name</th>
+                        <th class="content-caption">Last Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Employees)
+                    {
+                        <tr>
+                            <td class="content">@item.FirstName</td>
+                            <td class="content"><a asp-area="" asp-controller="details" asp-action="editemployee" asp-route-employeeId="@item.Id" asp-route-id="@Model.Id">@item.LastName</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        @await Component.InvokeAsync("Employee", Model.Id)
+    </div>
+</body>

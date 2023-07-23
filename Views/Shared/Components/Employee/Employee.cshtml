@@ -1,0 +1,40 @@
+﻿@model Employee
+
+<div class="detailsplus">
+    <div class="header">
+        <div class="table-header"> &#128393 <img src="~/images/Basket.png" alt="Удаление"></div>
+    </div>
+    <div class="toolbar">
+        <table class="toolbar">
+            <tbody>
+                <tr>
+                    <td>First Name</td>
+                    <td class="info-items">@Model.FirstName</td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td class="info-items">@Model.LastName</td>
+                </tr>
+                <tr>
+                    <td>Title:</td>
+                    @if (Model.Title == true)
+                    {
+                        <td class="info-items">Ms.</td>
+                    }
+                    else
+                    {
+                        <td class="info-items">Mr.</td>
+                    }
+                </tr>
+                <tr>
+                    <td>Birth Date:</td>
+                    <td class="info-items">@Model.BirthDate</td>
+                </tr>
+                <tr>
+                    <td>Position:</td>
+                    <td class="info-items">@Model.Position</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

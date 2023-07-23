@@ -1,8 +1,30 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+﻿@model List<Company>
+<body>
+    <div class="page">
+        <div class="header">
+            <h5>Companies</h5>
+            <div class="table-header">+ &#128393</div>
+        </div>
+        <table class="table-main">
+            <thead>
+                <tr>
+                    <th class="table-first-column">Company name</th>
+                    <th class="table-column">City</th>
+                    <th class="table-column">State</th>
+                    <th class="table-column">Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var company in Model)
+                {
+                    <tr>
+                        <td class="table-first-column td-half-borders"><a asp-area="" asp-controller="details" asp-action="index" asp-route-id="@company.Id">@company.Name</a></td>
+                        <td class="table-column td-half-borders">@company.City.Name</td>
+                        <td class="table-column td-half-borders">@company.State.Name</td>
+                        <td class="table-column td-half-borders">@company.Phone</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>

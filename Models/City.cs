@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public List <Company>? Companys { get; set; }
-        public List<Order>? Historys { get; set; }
+        public List <Company> Companies { get; set; }
+        public List<Order> Orders { get; set; }
     }
 }

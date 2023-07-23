@@ -2,6 +2,12 @@ html {
   font-size: 14px;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+} 
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -12,11 +18,130 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
 
 body {
   margin-bottom: 60px;
+}
+
+.page {
+    padding: 10px 40px 30px 15px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 30px;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.table-main {
+    padding: 10px 40px 30px 15px;
+    width: 100%;
+    border: 1px solid black;
+    border-bottom: 1px solid;
+    border-collapse: collapse;
+}
+
+.table-main th {
+    border: 1px solid;
+    padding: 5px 2px 2px 7px;
+}
+
+
+.td-half-borders {
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom:none;
+    padding: 5px 2px 2px 7px;
+}
+
+.header h5 {
+    float: left;
+}
+
+.table-header {
+    position: relative;
+    text-align: right;
+    font-size: 26px;
+}
+
+.table-first-column{
+    width: 30%;
+}
+
+.table-column{
+    width: 23%;
+}
+
+.container {
+    display: flex;
+    padding: 10px 10px 7px 15px;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: stretch;
+    
+}
+
+.details {
+    border-top: 1px solid;
+    border-spacing: 0.9em 0.4em;
+    width: 300px;
+    padding: 10px 2px 12px 2px;
+    margin: 25px;
+    border-bottom: 1px solid;
+}
+
+.caption {
+    font-size: 14px;
+    float: left;
+}
+
+.toolbar {
+    width: 300px;
+    border-spacing: 0.3em 0.3em;
+    border-collapse: separate;
+    object-fit: scale-down;
+}
+
+.history {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid;
+    padding: 3px 3px 5px 7px;
+}
+
+.content-caption {
+    font-size: 16px;
+    border: 1px solid;
+    padding: 2px 2px 2px 4px;
+    border-bottom: 1px solid;
+}
+
+.content {
+    font-size: 16px;
+    padding: 2px 6px 2px 4px;
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+
+.info-items {
+    border: 1px solid;
+    width: 60%;
+    margin: 3px 1px 3px 3px;
+    padding:3px 1px 3px 9px;
+}
+
+.right-side{
+    text-align: right;
+}
+
+.detailsplus {
+    border-top: 1px solid;
+    border-spacing: 0.9em 0.4em;
+    width: 300px;
+    padding: 10px 2px 12px 2px;
+    margin: 25px;
+    margin-left: 0;
+    border-bottom: 1px solid;
 }
