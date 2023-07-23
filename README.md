@@ -1,4 +1,4 @@
-- оригинальная реализация Test Assignment "List and details".
+Оригинальная реализация Test Assignment "List and details".
 - ASP NET Core 7.0
 - Razor
 - HTML
