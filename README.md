@@ -5,4 +5,3 @@
 - CSS
 - In-memory-database EF Core
 - Dependency Injection
-- 
