@@ -38,7 +38,7 @@
         </div>
         <div class="details">
             <div class="header">
-                <h5>History</h5> <div class="table-header">&#128472;</div>
+                <h5>History</h5> <div class="table-header"><a asp-area="" asp-controller="details" asp-action="index" asp-route-id="@Model.Id"><img src="~/images/Refresh.png" alt="Обновление"></a></div>
             </div>
             <table class="history">
                 <thead>
@@ -83,7 +83,7 @@
         </div>
         <div class="details">
             <div class="header">
-                <h5>Employees</h5> <div class="table-header"> + &#128393 &#128472;</div>
+                <h5>Employees</h5> <div class="table-header"> + &#128393 <a asp-area="" asp-controller="details" asp-action="index" asp-route-id="@Model.Id"><img src="~/images/Refresh.png" alt="Обновление"></a></div>
             </div>
             <table class="history">
                 <thead>

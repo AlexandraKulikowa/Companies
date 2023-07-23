@@ -6,7 +6,12 @@ html {
     margin: 0;
     padding: 0;
     border: 0;
-} 
+}
+
+a {
+    color: dimgray;
+    text-decoration: none;
+}
 
 @media (min-width: 768px) {
   html {
